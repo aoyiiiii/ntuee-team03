@@ -26,8 +26,6 @@ n=0
 while True :
     rate(200)
     ball.pos = ball.pos + (ball.p/ball.mass)*dt
-    thetai=np.arccos(dot(ball.p,wallnor)/mag(ball.p))
-    thetaip=np.arccos(dot(ball.p,flrnor)/mag(ball.p))
     if n < 315:
         if tan(theta)*ball.pos.x <= ball.pos.y:
             ball.p = (-2*(dot(wallnor,ball.p)*wallnor)+ball.p)
